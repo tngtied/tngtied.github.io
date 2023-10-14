@@ -13,7 +13,7 @@ baseurl:	'/'
 paginate:	3
 version:	0.1.1
 colorscheme:	scheme-gulfracing
-permalink: /:categories/:title
+permalink: /:category/:title
 
 ga:		'UA-123-456'
 piwikSiteID:	''
