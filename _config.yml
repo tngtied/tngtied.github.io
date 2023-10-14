@@ -6,12 +6,12 @@
 # For baseurl:
 # Use '' for / or '/your-dir' for another directory
 
-title:		RLStevenson
-description:	'A Bootstrap based clone of the Hyde theme by mdo.'
-freetext:	'Released under an MIT license - feel free to make pull requests.'
+title:		tngtied
+description:	'tngtied의 깃블로그입니다'
+freetext:	'레이아웃이 이상한 게 특징입니다. 너무 웃기지 않나요? PS와 웹 백엔드 위주로 올라옵니다.'
 baseurl:	'/'
 paginate:	3
-version:	0.1.0
+version:	0.1.1
 colorscheme:	scheme-gulfracing
 
 ga:		'UA-123-456'
@@ -23,7 +23,7 @@ author:
  name:		'ExchangeRate-API'
 
 github:
- repo:		https://github.com/ExchangeRate-API/rlstevenson-jekyll-theme
+ repo:		https://github.com/tngtied
 
 gems:		[jekyll-paginate]
 
