@@ -1,6 +1,6 @@
 ---
 layout: post
-category: cppstudy
+categories: cppstudy
 title: assignment of 10_13
 author: tngtied
 date: 2023-10-14
