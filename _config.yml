@@ -6,27 +6,28 @@
 # For baseurl:
 # Use '' for / or '/your-dir' for another directory
 
-title:		tngtied
+title:		tngtied's gitblog
 description:	'tngtied의 깃블로그입니다'
 freetext:	'레이아웃이 이상한 게 특징입니다. 너무 웃기지 않나요? PS와 웹 백엔드 위주로 올라옵니다.'
 baseurl:	'/'
 paginate:	3
 version:	0.1.1
 colorscheme:	scheme-gulfracing
+permalink: /:categories/:title
 
 ga:		'UA-123-456'
 piwikSiteID:	''
 piwikURL:	''
 
 author:
- url:		https://www.exchangerate-api.com
- name:		'ExchangeRate-API'
+ name:		'tngtied'
 
-github:
- repo:		https://github.com/tngtied
-
-solved:
-  url:    https://solved.ac/profile/tngtied
+# defaults:
+#   -
+#     scope:
+#       path: "/post/"
+#       type: "pages"
+      
 
 gems:		[jekyll-paginate]
 
