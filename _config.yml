@@ -25,6 +25,9 @@ author:
 github:
  repo:		https://github.com/tngtied
 
+solved:
+  url:    https://solved.ac/profile/tngtied
+
 gems:		[jekyll-paginate]
 
 exclude:	['README.md', 'Gemfile.lock', 'Gemfile', '*.gemspec', '*.gem']
