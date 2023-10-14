@@ -108,6 +108,10 @@ p {
 .sidebar .sidebar-menus li a {
 	text-decoration:underline;
 }
+.sidebar .sidebar-content a img {
+	padding-top: 1em;
+	padding-left: 1em;
+}
 @media (min-width: 768px) {
 	.sidebar {
 		top: 0;
