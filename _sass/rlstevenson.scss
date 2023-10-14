@@ -111,6 +111,8 @@ p {
 .sidebar .sidebar-content a img {
 	padding-top: 1em;
 	padding-left: 1em;
+	min-width: 100%;
+	min-height: 100%;
 }
 @media (min-width: 768px) {
 	.sidebar {
