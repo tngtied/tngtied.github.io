@@ -42,7 +42,6 @@ permalink: /:categories/:title
 
 <center><img src="/static/img/231014processLayout.png" alt="Process Layout" style="max-width:100%;"/></center>
 
-C:\Users\tngti\Documents\GitHub\tngtied.github.io\static\img\231014-processLayout.png
 프로세스는 위와 같이 구성되어 있으며, c를 기반으로 한 언어인 cpp로 프로그래밍할 경우 실제 메모리 기반으로 돌아가기 때문에 메모리 관리를 주의하며 코드를 작성해야 한다.
 
 기본적으로 우리가 선언하는 변수들은 전부 스택으로 쌓이며, 함수 또한 마찬가지이다. 함수에서 특정 값을 반환할 때, copy()동작이 내부적으로 일어나며 함수 바깥으로 값을 꺼낸다.
