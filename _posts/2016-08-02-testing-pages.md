@@ -40,7 +40,7 @@ permalink: /:categories/:title
 
 운영체제를 수강할 경우 process 단원에서 배우게 되는 내용이다.
 
-<center><img src="/static/img/231014processLayout.png" alt="Process Layout" style="width:20%;"/></center>
+<center><img src="/static/img/231014processLayout.png" alt="Process Layout" style="max-width:100%;"/></center>
 
 C:\Users\tngti\Documents\GitHub\tngtied.github.io\static\img\231014-processLayout.png
 프로세스는 위와 같이 구성되어 있으며, c를 기반으로 한 언어인 cpp로 프로그래밍할 경우 실제 메모리 기반으로 돌아가기 때문에 메모리 관리를 주의하며 코드를 작성해야 한다.
