@@ -16,7 +16,7 @@ date: 2023-10-14
 ```
 layout: post
 categories: cppstudy
-title: assignment of 10_13
+title: assignment of 10/13
 author: tngtied
 date: 2023-10-14
 ```
@@ -41,7 +41,7 @@ permalink: /:categories/:title
 
 운영체제를 수강할 경우 process 단원에서 배우게 되는 내용이다.
 
-<center><a><img src="../static/img/231014-processLayout.png" width = "50"></center>
+<center><a><img src="../static/img/231014-processLayout.png" width = "50"></a></center>
 
 프로세스는 위와 같이 구성되어 있으며, c를 기반으로 한 언어인 cpp로 프로그래밍할 경우 실제 메모리 기반으로 돌아가기 때문에 메모리 관리를 주의하며 코드를 작성해야 한다.
 
@@ -65,6 +65,8 @@ int b = 3;
 int a = move(b);
 ```
 move()함수의 경우에는 stack 내부에서 a가 b로 바뀐다. 
+
+
 
 -----
 
