@@ -22,6 +22,12 @@ piwikURL:	''
 author:
  name:		'tngtied'
 
+ # Markdown Processors
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 # defaults:
 #   -
 #     scope:
