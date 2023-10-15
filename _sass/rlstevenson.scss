@@ -109,10 +109,15 @@ p {
 	text-decoration:underline;
 }
 .sidebar .sidebar-content .capricat {
-	padding-top: 1em;
-	padding-left: 1em;
-	width: 30%;
-	height: 30%;
+	float:top !important;
+	width:100%;
+	position:relative;
+	height:auto;
+	margin-top:-20% !important;
+}
+.sidebar .sidebar-content .capricat-a {
+	width:100%;
+	overflow:hidden;
 }
 
 // i want the cat image to rotate eternally
