@@ -41,7 +41,8 @@ permalink: /:categories/:title
 
 운영체제를 수강할 경우 process 단원에서 배우게 되는 내용이다.
 
-<center><a><img src="/static/img/231014-processLayout.png" width = "50"></a></center>
+<center><img src="/static/img/231014processLayout.png" alt="Process Layout" style="width:20%;"/></center>
+
 C:\Users\tngti\Documents\GitHub\tngtied.github.io\static\img\231014-processLayout.png
 프로세스는 위와 같이 구성되어 있으며, c를 기반으로 한 언어인 cpp로 프로그래밍할 경우 실제 메모리 기반으로 돌아가기 때문에 메모리 관리를 주의하며 코드를 작성해야 한다.
 
@@ -66,10 +67,115 @@ int a = move(b);
 ```
 move()함수의 경우에는 stack 내부에서 a가 b로 바뀐다. 
 
-
-
 -----
 
 ## boj 24728 팬케이크맛 쿠키
 
+```java
+#include<cstdio>
+#include<iostream>
+#include <fstream>
+#include <cmath>
+#include "pancakecookie.h"
+#define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
+#define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
+
+
+PanCakeCookie::PanCakeCookie(int w, int h, int maxC, int u, int d) {
+	//TODO
+	this->w = w;
+	this->h = h;
+	this->maxC = maxC;
+	this->u = u;
+	this->d = d;
+	reset();
+}
+
+int PanCakeCookie::getX() { return this->x; }
+int PanCakeCookie::getY() { return this->y; }
+int PanCakeCookie::getU() { return this->u; }
+int PanCakeCookie::getD() { return this->d; }
+int PanCakeCookie::getScore() { return this->score; }
+int PanCakeCookie::getC() { return this->curC; }
+
+void PanCakeCookie::reset() {
+	this->x = 0;
+	this->y = 0;
+	this->t = 0;
+	this->score = 0;
+	this->curC = maxC;
+}
+
+
+void PanCakeCookie::setU(int x) {
+	// TODO 
+	if (x < 1 || x>1000) {
+		return;
+	}
+	this->u = x;
+	this->reset();
+}
+
+void PanCakeCookie::setD(int x) {
+	// TODO
+	if (x < 1 || x>1000) {
+		return;
+	}
+	this->d = x;
+	this->reset();
+}
+
+void PanCakeCookie::setC(int x) {
+	// TODO
+	if (x < 1 || x>1000) {
+		return;
+	}
+	this->maxC = x;
+	this->reset();
+	reset();
+}
+
+void PanCakeCookie::setT(int t) {
+
+	if (t<0 || t>=w) {
+		return;
+	}
+	int topToOne = (int) ceil(this->h+1 / this->d);
+	reset();
+	if (t == 0 ){return;}
+
+	auto down = [&]() {
+		this->y = MAX(this->getY() - this->getD(), 0);
+		this->score += MAX(this->y, 0);
+		this->x++;
+		this->curC +=1 ;
+	};
+
+	auto up = [&]() {
+		this->y = MIN(this->h, this->getY() + this->getU());
+		this->score += this->y;
+		this->x++;
+		this->curC -= 1;
+	};
+
+	while (this->t < t) {
+		this->t++;
+		if (this->t >= this->w){
+			//printf("->continued due to the width\n");
+			continue;
+			}
+		if (this->curC == 0 //만약 능력이 없으면 
+		) {
+			down();
+		}
+		else {
+			up();
+		}
+	}
+	// TODO
+}
+
+```
+그리디를 안 짜본지 너무 오래되어 생각보다 오래 걸렸다. 
+ceil()도 스스로 define한다면 cmath가 필요없어질 것 같다.
 
