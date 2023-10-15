@@ -8,7 +8,7 @@
 
 title:		tngtied's gitblog
 description:	'tngtied의 깃블로그입니다'
-freetext:	'레이아웃이 이상한 게 특징입니다. 고양이 사진 위에 마우스를 올려주세요.\n PS와 웹 백엔드 위주로 올라옵니다.'
+freetext:	'레이아웃이 이상한 게 특징입니다. 고양이 사진 위에 마우스를 올려주세요.<br> PS와 웹 백엔드 위주로 올라옵니다.'
 baseurl:	'/'
 paginate:	3
 version:	0.1.1
