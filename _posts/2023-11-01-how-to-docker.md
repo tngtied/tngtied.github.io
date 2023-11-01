@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: miscellaneous
 title: 맥 환경에서 도커 세팅하고 사용하기
 author: tngtied
 date: 2023-11-01
