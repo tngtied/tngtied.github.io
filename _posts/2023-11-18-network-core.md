@@ -1,15 +1,25 @@
 ---
 layout: post
 categories: Network
-title: 1. Network Edge
+title: 2. Network Core
 author: tngtied
 date: 2023-11-18
 ---
 
-인터넷은 interconnected ISP들로 구성되어 있다. 서비스의 관점에서 본다면 인터넷은 분산관 어플리케이션과 서비스들의 프로그래밍 인터페이스를 제공하는 인프라구조이다.
+네트워크의 코어란, interconnected routers(switch of switches)이다. 즉, 네트워크의 네트워크인 것이다.
 
-# Edges
-network edge들은 호스트와 서버들이다. 이들은 residential/institutional access network,  mobile wireless networks(wifi)를 통해 edge router와 연결된다.
+네트워크의 코어를 이해하기 위해서는 패킷 스위칭과 서킷 스위칭의 차이를 알아야 한다. 
+# Packet Switching versus Circuit Switching
+이들의 가장 핵심적인 차이점은 Resource Reservation과 Connection orientation이다. 
+
+## Resource Reservation
+Circuit Switching은 Network Admission Control을 가지고 있기 때문에 만약 traffic pattern이 안정적이고 예측가능하다면, circuit switching이 갖는 이점이 훨씬 크다. 
+반대로, 패킷 스위칭은 패킷화를 이용한다. 기본적으로 패킷 스위칭은 greedy하기 때문에 서킷 스위칭에서 일어날 수 있는 리소스 낭비가 일어나지 않는다. 또한, 미리 리소스를 예약하지 않기 때문에 다른 사용자들에게 transmission capacity를 공유해줄 수 있다. 더욱 간단하며, 효율적이고, 비용이 적게 든다. Router Scheduling의 granuality가 적어진다. 
+그러나 패킷 스위칭은 excessive congestion이 발생할 가능성이 있다. 이를 방지하기 위해 RED(Random Early Drop)과 admission control with "virtual circuit" approach와 같은 기법이 사용된다. 
+이에 대해서는 아래 항목에서 하술하겠다.  
+
+## Connection Oriented versus Connectionless
+Circuit switching은 connection oriented이며, packet switching은 connectionless한 기법이다. 
 
 ## Routers
 라우터는 어플리케이션의 메시지를 패킷으로 분해해 transmission rate R의 속도로 전송한다. 이 때 Transmission rate R은 아래와 같은 상관관계를 가진다.
