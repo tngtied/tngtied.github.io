@@ -34,8 +34,11 @@ docker run -it --name container-name -v /existing/directory/in/host:/new/directo
 ```
 
 ```container-name``` : 이 자리에 본인이 원하는 컨테이너 네임을 넣으면 된다.
+
 ```/existing/directory/in/host``` : 이 자리에 컨테이너 내부와 즉시 동기화되길 바라는 호스트 시스템의, 존재하는 디렉토리 경로를 넣으면 된다.
+
 ```/new/directory/in/container``` : 컨테이너 내부에 새로이 생성할 디렉토리의 경로이다. 나는 간단하게 /source로 입력해 접근하기 쉽도록 했다.
+
 ```ubuntu:20.04``` : 원하는 os image를 넣으면 되는데, syntax는 기본적으로 os_name:version 으로 이와 같다. 지원하는 os image는 아래에서 확인 가능하다.
 <a href="https://hub.docker.com/search?q="> hub.docker.com </a>
 
