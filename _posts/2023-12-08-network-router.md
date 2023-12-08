@@ -1,9 +1,11 @@
 ---
 layout: post
-title: More Pages
-author: ExchangeRate-API
-date: 2016-08-07
+categories: Network
+title: NW layer - Router
+author: tngtied
+date: 2023-12-08
 ---
+
 <center><img src="/static/img/generic-router-architecture.png" alt="Generic Router Architecture" style="max-width:100%;"/></center>
 
 router의 기본적인 구조는 위와 같다. 
