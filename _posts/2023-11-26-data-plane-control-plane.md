@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: Network
-title: NW layer - Data Plane
+title: Network layer - Data Plane and Control Plane
 author: tngtied
 date: 2023-11-26
 ---
@@ -11,17 +11,17 @@ Network Layer은 Application layer, Transport Layer 하위의 레이어로, 데�
 ## Network Layer Function
 여기서 주의해야 하는 점은 link는 단일 router 주변 scope로, router의 location에 의존적인 용어이지만, route(path)는 데이터그램의 source와 destination까지의 scope에서 사용되는 용어이다.
 
-### Forwarding
-패킷을 router의 input link로부터, 적절한 output link로 옮기는 것을 의미한다. 
+Network-layer의 기능은 data plane과 control plane으로 나뉜다. Data plane에서는 forwarding을, control plane에서는 routing을 담당한다.
+routing은 per-router control (traditional), logically centralized control (software defined networking) 두 가지 방식으로 구현 가능하다. 
 
-#### Data Plane : Local(per-router)
+### Data Plane : Local(per-router)
+여기서의 forwarding은 패킷을 router의 input link로부터, 적절한 output link로 옮기는 것을 의미한다. 
 per router function으로, datagram이 input port로부터 output port로 forward되는 방식을 정한다.
 
-### Routing
+## Control Plane : Network-side
 routing algorithm을 통해 패킷이 source부터 destination까지 도달하는 데 거쳐야 할 route를 결정한다.
-
-#### Control Plane : Network-side
 datagram이 source host로부터 destination host까지 도달할 수 있는 end-end path를 정한다.
+
 라우팅 알고리즘은 control plane 상에서 결정되며, 종류는 두 가지가 있다.
 * traditional routing algorithm: 라우트를 라우터에서 결정한다. 
 개개의 라우터에 존재하는 local forwarding table이 control plane에 존재하는 각각의 routing algorithm들과 연결되어 있다. 이러한 개개의 모든 라우터의 Individual routing algotirhm이 서로 상호작용한다. 

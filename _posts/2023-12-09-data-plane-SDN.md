@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: Network
-title: NW layer - SDN
+title: Network layer Data Plane - middlebox
 author: tngtied
 date: 2023-12-09
 ---

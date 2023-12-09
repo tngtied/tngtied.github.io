@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: Network
-title: NW layer - Router
+title: Network layer Data Plane  - Router
 author: tngtied
 date: 2023-12-08
 ---

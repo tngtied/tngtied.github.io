@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: Network
-title: NW layer - IP
+title: Network layer Data Plane - IP
 author: tngtied
 date: 2023-12-09
 ---
