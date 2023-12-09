@@ -11,6 +11,10 @@ date: 2023-12-09
 데이터그램은 위와 같이 구성되어 있다.
 
 -----
+# IP fragmentation/reassembly
+network link들은 max transfer size를 보유한다. 이를 초과하는 데이터그램은 fragment되며, 도착지에서만 재조립된다. order related한 fragmentation에서 각각의 조각들은 IP header bits로 identify된다.
+
+-----
 
 # addressing
 IP 주소는 32-bit의 식별자로, host 혹은 router interface를 지칭한다. 여기서 interface란 host/router와 physical link간의 연결을 의미한다. host와 달리 라우터의 경우 대개 여러 개의 interface를 가진다.
