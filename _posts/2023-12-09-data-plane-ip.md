@@ -82,3 +82,24 @@ IPv4와 비교했을 때 checksum, fragment/reassembly, option이 없다. 옵션
 ## Tunneling
 네트워크는 IPv4와 IPv6 라우터의 집합으로 구성되어 있다. 이 때 IPv6 데이터그램이 IPv4 라우터에서 처리되어야 하는 경우가 발생한다. 그 경우, IPv4 데이터그램 내부의 payload로서 담겨지는 tunneling과정을 거친다.
 tunneling은 logical view에서 IPv6/v4(router A) 와 IPv6/v4(router B) 간의 터널을 거치는 것으로 표현된다. 터널을 거치는 과정에서, IPv6 데이터그램을 캡슐화한 IPv4 데이터그램은 기존의 src와 dest가 아닌, A를 src로 그리고 B를 dest로 가진다. 기존의 src와 dest는 페이로드 내부에 보존된다.
+
+-----
+# ICMP
+ICMP는 host와 router간의 network-level 통신을 위해 사용된다. ICMP는 IP 데이터그램에 담겨 전달된다. 
+type, code plus first 8 bytes of IP datagram causing error로 구성되어 있다. 
+각각 type, code, description은 아래와 같다.
+~~~
+0, 0, echo reply (ping)
+3, 0, dest. network unreachable
+3, 1, dest host unreachable
+3, 2, dest protocol unreachable
+3, 3, dest port unreachable
+3, 6, dest network unknown
+3, 7, dest host unknown
+4, 0, source quench (congestion control - not used)
+8, 0, echo request (ping)
+9, 0, route advertisement
+10, 0, router discovery
+11, 0, TTL expired
+12, 0, bad IP header
+~~~

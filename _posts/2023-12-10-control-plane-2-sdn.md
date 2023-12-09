@@ -45,3 +45,59 @@ OpenFlow는 controller와 switch간에 사용되며, TCP의 형태로 이루어�
 
 ## 응용
 Openflow interface를 응용한 controller는 OpenDaylight (ODL)과 ONOS 가 있다. 
+-----
+# Network Management
+아래 4 가지로 구성되어 있다.
+* Managing server
+application, typically with network managers (humans) in the loop
+* Network management protocol
+used by managing server to query, configure, manage device; used by devices to inform managing server of data, events.
+* Managed device
+equipment with manageable, configurable hardware, software components
+* Data
+device “state” configuration data, operational data, device statistics
+
+## 방법
+방법으로는 세 가지가 있다.
+### CLI (Command Line Interface) 
+operator issues (types, scripts) direct to individual devices (e.g., vis ssh)
+### SNMP/MIB 
+operator queries/sets devices data (MIB) using Simple Network Management Protocol (SNMP)
+메시지 타입에 따라 네 가지의 기능을 한다. 
+* GetRequest, GetNextRequest, GetBulkRequest
+manager-to-agent, data instance, next data in list, block of data를 요청한다.
+* SetRequest
+manager-to-agent, MIB value를 설정한다.
+* Response
+Agent-to-manager, value, response를 응답한다.
+* Trap
+Agent-to-manager, exceptional event를 알린다.
+
+각각은 아래와 같이 구성된다.
+<center><img src="/static/img/snmp-structure.png" alt="SNMP structure" style="max-width:100%;"/></center>
+
+이는 선택적으로 MIB(Management Information Base)에서 처리될 수 있다. DDL은 SMI(structure of management information)으로 칭해진다.
+
+### NETCONF/YANG
+more abstract, network-wide, holistic emphasis on multi-device configuration management. 
+* YANG: data modeling language 
+* NETCONF: communicate YANG-compatible actions/data to/from/among remote devices 
+
+#### NETCONFIG
+managing server와 managed NW device간에서 retrieve, set, modify, activate configurations을 한다. 
+atomic-commit action이 여러 디바이스에서 가능하며, operational data, statistic을 query할 수 있다. 해당 메시지는 XML로 인코드된다.
+그 통신의 종류는 다음과 같다. 
+* `get-config`
+주어진 configuration의 부분 혹은 전체를 리퀘스트한다.
+* `get`
+주어진 configuration state와 함께 operational state data의 부분 혹은 전체를 리퀘스트한다.
+* `edit-config`
+특정한 configuration을 바꾼다. Managed device `rpc-reply` contains `ok`  or `rpcerror` with rollback.
+* `lock`, `unlock`
+managed device의 configuration datastore을 lock(unlock)한다.
+* `create-subscription`, `notification`
+managed device로부터의 이벤트 notification을 구독하거나 허용한다.
+
+#### YANG
+데이터 모델링 언어로, NETCONFIG 데이터의 structure, syntax, semantic을 명시한다.
+XML document의 형식을 하며, NETCONFIG configuration을 검증하기 위한 contraint를 표현할 수 있다. 
