@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: Network
-title: Network layer Control Plane  - routing protocol
+title: Network layer Control Plane - routing protocol
 author: tngtied
 date: 2023-12-10
 ---
