@@ -3,7 +3,7 @@ layout: post
 categories: Network
 title: Link layer - LANs
 author: tngtied
-date: 2023-12-14
+date: 2023-12-15
 ---
 MAC 주소는 프레임을 하나의 인터페이스에서 다른 인터페이스로 옮기기 위해 지역적으로 사용된다. 여기서 지역적이란, 동일한 subnet 내부 IP-addressing의 의미에서이다. 4 bit짜리의 hexadecimal 12자리로 이루어져 있으며 총 48bit이다. MAC주소는 IEE에 의해 부여되며, 생산자가 MAC 주소의 일부를 산다.
 MAC 주소는 LAN에 있어서 유동성을 띤다. 하나의 LAN에서 다른 LAN으로 이동할 때 고유하게 유지되며, 이 점에서 LAN에 의존적인 IP 주소와 구분할 수 있다.
