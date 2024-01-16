@@ -13,7 +13,7 @@ Ethernet header와 ethernet frame, IP datagram 사이에 MPLS(Multiprotocol labe
 - fixed length identifier을 사용한 더욱 빠른 lookup
 - VC(virtual circuit)와 유사한 동작
   MPLS 헤더는 아래와 같은 구조를 지닌다.
-  > label(20) | Exp(3) | S(1) | TTL(5)
+  > label(20) \| Exp(3) \| S(1) \| TTL(5)
 
 ## MPLS capable routers
 
