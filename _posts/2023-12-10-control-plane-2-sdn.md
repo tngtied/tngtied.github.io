@@ -13,7 +13,7 @@ distributed programming의 경우, distributed algorithm이 각각의 라우터�
 
 SDN의 구조는 다음과 같다.
 
-<center><img src="/static/img/sdn-structure.png" alt="SDN structure" style="max-width:100%;"/></center>
+<center><img src="/static/img/SDN-structure.png" alt="SDN structure" style="max-width:100%;"/></center>
 
 ## Data-plane switch
 
@@ -100,7 +100,7 @@ operator queries/sets devices data (MIB) using Simple Network Management Protoco
 
 각각은 아래와 같이 구성된다.
 
-<center><img src="/static/img/snmp-structure.png" alt="SNMP structure" style="max-width:100%;"/></center>
+<center><img src="/static/img/SNMP-structure.png" alt="SNMP structure" style="max-width:100%;"/></center>
 
 이는 선택적으로 MIB(Management Information Base)에서 처리될 수 있다. DDL은 SMI(structure of management information)으로 칭해진다.
 
