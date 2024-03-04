@@ -1,12 +1,12 @@
 ---
 layout: post
 categories: [Network]
-title: Network layer Control Plane - routing protocol
+title: Routing Protocol
 author: tngtied
 date: 2023-12-10
 ---
 
-routing protocol은 sending host로부터 receiving host까지의 path를 결정한다. 이 때의 path란 경로상의 sequence of routers를 의미한다. 해당 path가 efficient하고 fast하고 least congested하도록 결정해야 한다.
+routing protocol은 control plane에서 sending host로부터 receiving host까지의 path를 결정한다. 이 때의 path란 경로상의 sequence of routers를 의미한다. 해당 path가 efficient하고 fast하고 least congested하도록 결정해야 한다.
 
 routing alogorithm은 2가지 척도로 분류된다.
 
