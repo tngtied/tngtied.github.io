@@ -6,7 +6,14 @@ author: tngtied
 date: 2023-11-18
 ---
 
-인터넷은 interconnected ISP들로 구성되어 있다. 서비스의 관점에서 본다면 인터넷은 분산관 어플리케이션과 서비스들의 프로그래밍 인터페이스를 제공하는 인프라구조이다.
+# 인터넷이란?
+
+인터넷은 크게 두 가지 관점으로 바라볼 수 있다. 첫 번째로, 구성요소의 관점이다. 인터넷은 컴퓨팅 디바이스, 네트워킹 어플리케이션과 같은 호스트들과 이들 간에 오가는 packet들을 포워딩하는 패킷 스위치, communication link, 그리고 네트워크들로 이루어져있다. 인터넷은 네트워크들의 네트워크로, interconnected ISP들이며, 이들이 통신하는 protocol들로 이루어져있다.
+서비스의 관점에서 본다면 인터넷은 어플리케이션에게 서비스를, 그리고 분산된 어플리케이션에게 프로그래밍 인터페이스를 제공하는 인프라구조이다.
+
+# 프로토콜이란?
+
+네트워크 내 개체들 간에 송신, 수신되는 메시지의 포맷과 순서 그리고 메시지 전송에 있어서 취해지는 액션을 정의한다.
 
 # Edges
 
@@ -22,7 +29,7 @@ Tranmission rate == link capacity == link bandwidth
 
 ## Access Network
 
-shared access인지, dedicated line인지에 따라 두 가지로 나뉜다.
+해당 디바이스가 네트워크에 접근하는 방식이 shared access인지, dedicated line인지에 따라 두 가지로 나뉜다.
 
 ### shared access: CMTRS(Cable Modem Termination System)
 
@@ -37,13 +44,13 @@ Network of cables attaches homes to ISP routers의 구조로 이루어진다. �
 
 Access 요청을 하는 주체에 따라 나누어 보자면 아래와 같다.
 
-### Home
+#### Home
 
 ```
 ( Wifi(Wireless Access Point) + router(NAT) + cable || DSL modem )-( headend || central office )
 ```
 
-### Enterprise Network
+#### Enterprise Network
 
 ```
 ( mix of wired/wireless link )-( mix of switches/routers )
