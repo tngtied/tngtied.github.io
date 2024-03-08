@@ -21,8 +21,9 @@ HashSet은 정렬 순서, 삽입 순서를 신경쓰지 않는다. LinkedHashSet
 
 # Map
 
-Map 인터페이스를 구현하는 클래스로는 HashTable, HashMap이 있다.
+Map 인터페이스를 구현하는 클래스로는 HashTable, HashMap, LinkedHashMap, TreeMap이 있다.
 HashMap과 달리 HashTable은 synchronized하므로 thread-safe하다. 또한 해시맵은 key : null를 저장할 수 있지만 hashtable은 불가능하다.
+TreeMap은 다른 맵과 달리 NavigableMap을 구현하므로 다른 Map 자료에서는 불가능한 연산을 다양하게 할 수 있다.
 
 # Queue
 
