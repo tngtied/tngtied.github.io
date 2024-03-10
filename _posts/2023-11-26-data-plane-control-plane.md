@@ -10,7 +10,7 @@ Network Layer은 Application layer, Transport Layer 하위의 레이어로, 데�
 
 ## Network Layer Function
 
-여기서 주의해야 하는 점은 link는 단일 router 주변 scope로, router의 location에 의존적인 용어이지만, route(path)는 데이터그램의 source와 destination까지의 scope에서 사용되는 용어이다.
+여기서 주의해야 하는 점은 link는 단일 router 주변 scope로, router의 location에 의존적인 용어이지만, route(path)는 데이터그램의 source와 destination까지의 scope에서 사용되는 용어라는 점이다.
 
 Network-layer의 기능은 data plane과 control plane으로 나뉜다. Data plane에서는 forwarding을, control plane에서는 routing을 담당한다.
 routing은 per-router control (traditional), logically centralized control (software defined networking) 두 가지 방식으로 구현 가능하다.
