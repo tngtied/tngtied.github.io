@@ -14,6 +14,11 @@ Collections가 포함하는 자료형 인터페이스는 Set, List, Queue, Map�
 List 인터페이스를 구현하는 클래스로는 ArrayList, LinkedList, Vector가 있다.
 LinkedList는 삽입과 삭제가 빠르지만 조회가 ArrayList보다 느리다. 이 말은 반대로 하면 ArrayList는 삽입과 삭제가 보다 느리지만 indexing을 통한 조회가 빠르다는 것이 된다. 이 둘과 비교해봤을 때 Vector thread safe하다는 점에서 차이점을 가진다.
 
+## List.of()에 대하여
+
+List가 인터페이스라면 List의 스태틱 메소드인 of()는 무엇을 반환하는 것일까? 인터페이스는 인스턴스를 가질 수 없는데 우리는 무엇을 다루고 있는 것일까?
+보통 List.of()로 생성된 것은 List<T>로 타입 지정이 된다. 그러나 실제로는 내부적으로 `java.util.ImmutableCollections`의 정적 하위 클래스 중 하나의 인스턴스를 다루게 된다. 우리는 구체적으로 클래스 이름을 알 필요가 없으며, 해당 클래스가 List 인터페이스의 메소드를 지원한다는 것만 알면 된다.
+
 # Set
 
 Set은 기본적으로 순서가 없고, 중복이 허용되지 않는 자료구조이다. 이를 구현한 클래스로는 HashSet, LinkedHashSet, TreeSet이 있다.
