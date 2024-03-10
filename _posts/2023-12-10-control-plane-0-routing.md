@@ -11,21 +11,29 @@ routing protocol은 control plane에서 sending host로부터 receiving host까�
 routing alogorithm은 2가지 척도로 분류된다.
 
 - global <-> decentralized
+
   첫 번째 척도는 global한지 decentralized한지이다.
   global한 경우 모든 라우터가 topology, link cost 정보를 가진다. “link state” algorithm이 사용된다.
   decentralized의 경우 주변 라우터와의 link cost만을 가지고 주변과 iterative하게 통신한다. 이 때 “distance vector” algorithms이 사용된다.
+
 - static <-> dynamic
+
   static한 알고리즘의 경우 route는 천천히 바뀐다. 동적일 경우, 보다 빠르게 변하며 주기적으로 혹은 link cost 변경에 따라 update된다.
 
 대표적으로 link state 알고리즘과 distance vector 알고리즘이 존재한다. 이는 3가지 척도로 비교 가능하다.
 
 - message complexity
+
   LS의 경우 n개의 라우터가 존재한다면 O(n^2)개의 메시지가 전송된다.
   DV의 경우 분산되어 있으므로 추정하기 어렵다.
+
 - speed of convergence
+
   LS의 경우 O(n^2)개의 알고리즘과 O(n^2)개의 메시지가 발생하므로 oscillation이 발생할 수 있다.
   DV의 경우 추정하기 어려우며, routing loop, count-to-infinity가 발생할 수 있다.
+
 - robustness (router malfunctions, compromisation)
+
   LS의 경우 incorrect link cost를 notify할 수 있다. 또한, 매 라우터가 자신의 table만을 안다.
   DV의 경우 incorrect path cost를 notify하며 black-holing을 유발할 수 있다. 또한, 매 라우터가 이웃 노드에게 알리기 때문에 에러가 네트워크를 통해 전파될 수 있다.
 
