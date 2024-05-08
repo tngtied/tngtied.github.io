@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [Network]
-title: 2. Network Core - Packet Switching
+title: Packet Switching vs Circuit Switching
 author: tngtied
 date: 2023-11-18
 ---
