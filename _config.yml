@@ -26,7 +26,12 @@ piwikURL:	''
 author:
  name:		'tngtied'
  
-highliter:	'rouge'
+markdown: kramdown
+highlighter: rouge
+
+# Markdown Processing
+kramdown:
+  input: GFM
 
 # defaults:
 #   -
