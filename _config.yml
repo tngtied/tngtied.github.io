@@ -24,13 +24,16 @@ piwikURL:	''
 
 author:
  name:		'tngtied'
+ 
+highliter:	'rouge'
 
 # defaults:
 #   -
 #     scope:
 #       path: "/post/"
 #       type: "pages"
-      
+plugins:
+  - jekyll-url
 
 gems:		[jekyll-paginate]
 
