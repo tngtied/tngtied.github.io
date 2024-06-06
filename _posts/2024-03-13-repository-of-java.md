@@ -1,0 +1,1 @@
+JPArepository와 CRUDRepository의 차이
